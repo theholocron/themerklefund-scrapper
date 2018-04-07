@@ -66,11 +66,11 @@ class FoundIcoURLScraper(AbstractURLScraper):
 
     @property
     def available_filters(self):
-        return ['#ico-pan-1','#ico-pan-2']
+        return ['#ico-pan-1', '#ico-pan-2']
 
     @property
     def homepage_html_tags(self):
-        return ('div',{'class':'ii-b-btn'})
+        return ('div', {'class':'ii-b-btn'})
 
     @property
     def ico_url(self):
@@ -85,11 +85,11 @@ class CryptocoinchartsURLScraper(AbstractURLScraper):
 
     @property
     def available_filters(self):
-        return ['upcoming', 'current','completed']
+        return ['upcoming', 'current', 'completed']
 
     @property
     def homepage_html_tags(self):
-        return ('td',{'class':'ico_first_line'})
+        return ('td', {'class':'ico_first_line'})
 
     @property
     def ico_url(self):
@@ -108,7 +108,7 @@ class ICObenchURLScraper(AbstractURLScraper):
 
     @property
     def homepage_html_tags(self):
-        return ('div',{'class':'content'})
+        return ('div', {'class':'content'})
 
     @property
     def ico_url(self):

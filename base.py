@@ -79,5 +79,5 @@ class AbstractURLScraper(object):
                 derived_url = self.get_from_element(element)
                 if not derived_url:
                     continue
-                derived_urls.append(self.ico_url+derived_url)
+                derived_urls.append(self.ico_url + derived_url)
         return set(derived_urls)
