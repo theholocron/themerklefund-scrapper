@@ -23,18 +23,18 @@ class AbstractURLScraper(object):
         a tuple of properties for the .findAll method to search for on the homepage
         """
 
-    @abc.abstractproperty
+    @property
     def elements_filter(self):
-        """
-        a tuple of operations/params to run on each element
-        """
+        return ('findChild', 'a', 'get', 'href')
 
     def get_soup(self, url):
         """
         returns a soup object for the contents of the `url`
         """
-        response = requests.get(url)
-
+        headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) \
+                                  AppleWebKit/537.36 (KHTML, like Gecko) \
+                                  Chrome/50.0.2661.102 Safari/537.36'}
+        response = requests.get(url, headers=headers)
         if response.status_code != 200:
             # self.log_to_slack("<msg>")
             return
