@@ -39,23 +39,23 @@ class IcoDataURLScraper(AbstractURLScraper):
         return 'https://www.icodata.io'
 
 
-class CryptoSlateURLScraper(AbstractURLScraper):
+# class CryptoSlateURLScraper(AbstractURLScraper):
 
-    @property
-    def base_url(self):
-        return 'https://cryptoslate.com/ico-database/'
+#     @property
+#     def base_url(self):
+#         return 'https://cryptoslate.com/ico-database/'
 
-    @property
-    def available_filters(self):
-        return ['', 'pre-icos', 'upcoming-icos']
+#     @property
+#     def available_filters(self):
+#         return ['', 'pre-icos', 'upcoming-icos']
 
-    @property
-    def homepage_html_tags(self):
-        return ('div', {"class": "row"})
+#     @property
+#     def homepage_html_tags(self):
+#         return ('div', {"class": "row"})
 
-    @property
-    def ico_url(self):
-        return ''
+#     @property
+#     def ico_url(self):
+#         return ''
 
 
 class FoundIcoURLScraper(AbstractURLScraper):
@@ -77,23 +77,23 @@ class FoundIcoURLScraper(AbstractURLScraper):
         return self.base_url
 
 
-class CryptocoinchartsURLScraper(AbstractURLScraper):
+# class CryptocoinchartsURLScraper(AbstractURLScraper):
 
-    @property
-    def base_url(self):
-        return 'https://cryptocoincharts.info/ico?page=1&cats=0&bc=0&type='
+#     @property
+#     def base_url(self):
+#         return 'https://cryptocoincharts.info/ico?page=1&cats=0&bc=0&type='
 
-    @property
-    def available_filters(self):
-        return ['upcoming', 'current', 'completed']
+#     @property
+#     def available_filters(self):
+#         return ['upcoming', 'current', 'completed']
 
-    @property
-    def homepage_html_tags(self):
-        return ('td', {'class':'ico_first_line'})
+#     @property
+#     def homepage_html_tags(self):
+#         return ('td', {'class':'ico_first_line'})
 
-    @property
-    def ico_url(self):
-        return 'https://cryptocoincharts.info'
+#     @property
+#     def ico_url(self):
+#         return 'https://cryptocoincharts.info'
 
 
 class ICObenchURLScraper(AbstractURLScraper):
